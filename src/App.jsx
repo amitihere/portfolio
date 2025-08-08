@@ -3,7 +3,18 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const gitu = () =>{
+    window.open("https://github.com/amitihere")
+  }
+  const linku = () =>{
+    window.open("https://www.linkedin.com/in/amiti-aneesh-93026633a/")
+  }
+  const emailu = () =>{
+    alert("amiti.aneesh1@gmail.com")
+  }
+  const leetu = () =>{
+    window.open("https://leetcode.com/u/amitiheree/")
+  }
   return (
     <>
       <div className='heading'>
@@ -24,10 +35,10 @@ function App() {
             </div>
           </div>
           <div className='contact'>
-              <img src='icons8-github-50.png'></img>
-              <img src='icons8-linkedin-48.png'></img>
-              <img src='icons8-email-64.png'></img>
-              <img src='icons8-leetcode-24.png'></img>
+              <img onClick= {gitu} src='icons8-github-50.png'></img>
+              <img onClick= {linku} src='icons8-linkedin-48.png'></img>
+              <img onClick= {emailu} src='icons8-email-64.png'></img>
+              <img onClick= {leetu}src='icons8-leetcode-24.png'></img>
           </div>
           <h3 style={{color:'brown'}}>~ For more information please proceed to the bottom ~</h3>
         </div>
