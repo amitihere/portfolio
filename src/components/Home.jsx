@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import '../designs/Home.css';
+import { Link } from "react-router-dom";
+import Footer from './Footer';
 
 function Home() {
   const [count, setCount] = useState(0);
@@ -42,12 +44,7 @@ function Home() {
           </div>
           <h3 style={{color:'brown'}}>~ For more information please proceed to the bottom ~</h3>
         </div>
-        <div className='foot'>
-            <h1>Projects</h1>
-            <h1 >About me</h1>
-            <h1>Interests</h1>
-            <h1>Home</h1>
-          </div>
+        <Footer/>
       </div>
     </>
   )

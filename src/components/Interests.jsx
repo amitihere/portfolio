@@ -1,10 +1,10 @@
 import React from 'react'
 import Footer from './Footer'
-export default function Projects(){
+export default function Interests() {
   return (
     <>
-        <div>Projects</div>
+        <div>Interests</div>
         <Footer/>
     </>
   )
-}
+};
