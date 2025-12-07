@@ -37,6 +37,10 @@ function Home() {
               <img src='../assets/icons8-html-50.png'></img>
               <img src='../assets/icons8-react-100.png'></img>
               <img src='../assets/icons8-css-50.png'></img>
+              <img src='../assets/icons8-mysql-48.png'></img>
+              <img src='../assets/icons8-express-js-30.png'></img>
+              <img src='../assets/icons8-prisma-orm-48.png'></img>
+              <img src='../assets/icons8-mongodb-48.png'></img>
             </div>
           </div>
           <div className='contact'>

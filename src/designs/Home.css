@@ -6,7 +6,6 @@
   flex-direction: column;
   align-items: center;
   padding-top: 120px;
-  /* Increased to prevent image cutoff */
 }
 
 .profile-header {
@@ -19,20 +18,16 @@
   max-width: 1000px;
   margin-bottom: 40px;
   flex-wrap: wrap;
-  /* Allow wrapping on smaller screens */
 }
 
 #hello {
-  width: 300px;
-  /* Fixed width for side-by-side */
+  width: 400px;
   height: 300px;
   object-fit: cover;
   border-radius: 15px;
-  /* Reverted to rounded square */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   display: block;
   margin: 0;
-  /* Remove auto margin */
 }
 
 #main {

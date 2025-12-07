@@ -11,7 +11,7 @@ export default function About() {
       </p>
       <br />
       <p>
-        I specialize in the MERN stack (MongoDB, Express, React, Node.js) and enjoy creating seamless user experiences.
+        I specialize in the MERN stack <strong>(MongoDB, Express, React, Node.js)</strong> and enjoy creating seamless user experiences.
         When I'm not coding, I'm constantly learning new technologies to stay ahead in this ever-evolving field.
         I believe in the power of clean code and collaborative development to bring innovative ideas to life.
       </p>
