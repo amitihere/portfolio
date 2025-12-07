@@ -1,111 +1,173 @@
-.heading{
-    position: relative;
-    width: fit-content;
-  }
-  #hello{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-  }
-  #main{
-    color: rgb(51, 45, 45);
-    margin: 22px;
+.heading {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120px;
+  /* Increased to prevent image cutoff */
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 90%;
+  max-width: 1000px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
+}
+
+#hello {
+  width: 300px;
+  /* Fixed width for side-by-side */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  /* Reverted to rounded square */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0;
+  /* Remove auto margin */
+}
+
+#main {
+  color: #333;
+  margin: 0;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 3.5rem;
+  flex: 1;
+  /* Allow text to take space */
+  min-width: 300px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info h2 {
+  font-size: 2rem;
+  color: #444;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  background-color: rgba(202, 193, 193, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.tech h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.skills {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.skills img:hover {
+  transform: scale(1.1);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.contact img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.contact img:hover {
+  opacity: 0.6;
+}
+
+/* Restored Footer Styling */
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: rgb(172, 169, 169);
+  width: 60%;
+  margin: 40px auto;
+  z-index: 2;
+  border-radius: 40px;
+  border: 1px solid gray;
+  padding: 15px 0;
+  /* Increased padding slightly */
+}
+
+.foot h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.3rem;
+  /* Slightly larger */
+  margin: 0;
+  padding: 10px;
+  color: #333;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  font-weight: 900;
+  /* Extra bold */
+  text-transform: uppercase;
+  /* Make it stand out more */
+}
+
+.foot h1:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column-reverse;
+    /* Stack on mobile, image on top or bottom? usually image top, but let's keep original order if stacked */
     text-align: center;
-    text-decoration: solid;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 200%;
-    position: absolute;
   }
-  .info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    position: absolute;
-    top: 13vh;
-    left: 4vh;
-    width: 55%;
-    height: 20%;
-    align-items: center;
+
+  #hello {
+    width: 80%;
+    height: auto;
   }
-  .info h2{
-    font-size: 200%;
-    color: rgb(51, 52, 56);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  .info p{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    line-height: 2.5vh;
-    font-size: 2ch;
-  }
-  .tech{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 40px;
-    top: 40vh;
-    width: 100%;
-    background-color: rgb(202, 193, 193);
-    border-radius: 10px;
-    
-  
-  }
-  .tech h1{
-    opacity: 1;
-    color: rgb(52, 50, 48);
-  }
-  .tech img{
-    width: 70px;
-    height: 70px;
-    width: fit-content;
-    padding: 15px;
-  }
-  .skills{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .contact{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-  }
-  .contact img{
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    padding: 10px;
-  }
-  .contact img:hover{
-    opacity: 0.5;
-  }
-  .foot{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    background-color: rgb(172, 169, 169);
-    width: 60%;
-    margin: 0 auto;
-    z-index: 2;
-    border-radius: 40px;
-    border: 1px solid gray;
-    position: absolute;
-    bottom: 10px;
-    left: 20%;
-  }
-  .foot h1{
-    font-family:'Courier New', Courier, monospace;
-    font-size: 170%;
-  }
-  .foot h1:hover{
-    cursor: pointer;
-    opacity: 0.6;
-  }
-  a{
-    color: inherit;
-    text-decoration: none;
-  }
+}

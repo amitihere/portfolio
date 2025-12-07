@@ -1,17 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import '../designs/Home.css'
 
-export default function Footer(){
+export default function Footer() {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div>
-        <div className='foot'>
-            <h1><Link to="/projects">Projects</Link></h1>
-            <h1><Link to="/about">About me</Link></h1>
-            <h1><Link to="/interests">Interests</Link></h1>
-            <h1><Link to="/">Home</Link></h1>
-            
-        </div>
+      <div className='foot'>
+        <h1 onClick={() => scrollToSection('projects')}>Projects</h1>
+        <h1 onClick={() => scrollToSection('about')}>About me</h1>
+        <h1 onClick={() => scrollToSection('interests')}>Interests</h1>
+        <h1 onClick={() => scrollToSection('home')}>Home</h1>
+      </div>
     </div>
   )
 }

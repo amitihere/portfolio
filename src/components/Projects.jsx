@@ -1,7 +1,7 @@
 import React from 'react'
 import '../designs/Projects.css'
-import Footer from './Footer'
-export default function Projects(){
+
+export default function Projects() {
     const content = [{
         id: 1,
         name: 'SportsHub',
@@ -37,25 +37,24 @@ export default function Projects(){
         para: 'The portfolio about my work',
         lang: 'HTML | CSS | JAVASCRIPT | REACT'
     }
-]
-  return (
-    <div className='whole'>
-        <div className='container'>
-        {content.map((data,index)=>{
-            return (
-                
-                    <div className='cards'>
-                        <h2>Title: {data.name}</h2>
-                        <h3>Link: <a onClick={()=>{window.open(`${data.url}`)}}>{data.url}</a></h3>
-                        <p>{data.para}</p>
-                        <h2>Languages used: {data.lang}</h2>
-                    </div>
-                
-            )
-            
-        })}
+    ]
+    return (
+        <div className='whole'>
+            <div className='container'>
+                {content.map((data) => {
+                    return (
+
+                        <div className='cards'>
+                            <h2>Title: {data.name}</h2>
+                            <h3>Link: <a onClick={() => { window.open(`${data.url}`) }}>{data.url}</a></h3>
+                            <p>{data.para}</p>
+                            <h2>Languages used: {data.lang}</h2>
+                        </div>
+
+                    )
+
+                })}
+            </div>
         </div>
-        <Footer/>
-    </div>
-  )
+    )
 }
