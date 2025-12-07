@@ -24,7 +24,7 @@ function Home() {
         {/* <img id='profile' src='IMG_0783.JPG'></img> */}
         <div className="profile-header">
           <h1 id='main'>~AMITI ANEESH~</h1>
-          <img id='hello' src='../assets/old-camera-notebook-laptop-with-blue-pencil-cup-cappuccino-white-background.jpg'></img>
+          <img id='hello' src='../assets/old-camera-notebook-laptop-with-blue-pencil-cup-cappuccino-white-background-min (1).jpg'></img>
         </div>
         <div className='info'>
           <h2>Hi Everyone!! I'm Aneesh</h2>
